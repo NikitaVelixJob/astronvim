@@ -1,3 +1,10 @@
+-- disable netrw at the very start of your init.lua
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+-- set termguicolors to enable highlight groups
+vim.opt.termguicolors = true
+
 return {
   -- Configure AstroNvim updates
   updater = {
@@ -60,7 +67,15 @@ return {
     performance = {
       rtp = {
         -- customize default disabled vim plugins
-        disabled_plugins = { "tohtml", "gzip", "matchit", "zipPlugin", "netrwPlugin", "tarPlugin" },
+        disabled_plugins = {
+          "neo-tree",
+          "tohtml",
+          "gzip",
+          "matchit",
+          "zipPlugin",
+          "netrwPlugin",
+          "tarPlugin",
+        },
       },
     },
   },
